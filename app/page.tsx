@@ -2,64 +2,107 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+      {/* Header / Hero Section */}
+      <header className="bg-white border-b border-slate-200 py-16 px-6 sm:px-12 text-center">
+        <div className="max-w-3xl mx-auto">
+          <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+            Portafolio Profesional
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+            Desarrollador Full-Stack Jr.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg text-slate-600 mb-8">
+            Apasionado por el desarrollo de software, la creación de interfaces web limpias y funcionales, y la ciberseguridad (DevSecOps).
           </p>
+          <div className="flex justify-center gap-4">
+            <a
+              href="#proyectos"
+              className="bg-[#5E7C64] hover:bg-[#4d6652] text-white font-medium px-6 py-3 rounded-lg shadow transition"
+            >
+              Ver Proyectos
+            </a>
+            <a
+              href="https://github.com/javrstudent-sys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-200 hover:bg-slate-300 text-slate-800 font-medium px-6 py-3 rounded-lg transition"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Main Content / Proyectos */}
+      <main id="proyectos" className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-bold text-slate-900 mb-8 border-b pb-3">
+          Mis Proyectos Destacados
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Proyecto 1: Boupetique */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-bold text-slate-900">Boupetique</h3>
+                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                  E-commerce
+                </span>
+              </div>
+              <p className="text-slate-600 text-sm mb-4">
+                Panel de administración y gestión de productos para tienda de mascotas. Incluye validación de formularios en tiempo real, manejo de localStorage y vistas dinámicas.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">HTML5</span>
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">Bootstrap 5</span>
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">JavaScript (ES6+)</span>
+              </div>
+            </div>
+            <div className="px-6 pb-6 pt-0">
+              <a
+                href="#"
+                className="text-emerald-700 hover:text-emerald-800 font-semibold text-sm inline-flex items-center gap-1"
+              >
+                Ver detalles &rarr;
+              </a>
+            </div>
+          </div>
+
+          {/* Proyecto 2: Módulo de Registro y Autenticación */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-bold text-slate-900">Sistema de Registro</h3>
+                <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                  Seguridad y Usuarios
+                </span>
+              </div>
+              <p className="text-slate-600 text-sm mb-4">
+                Módulo completo de registro de cuentas y perfiles de mascotas con validaciones estrictas de seguridad, control de contraseñas y alertas interactivas.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">JavaScript</span>
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">SweetAlert2</span>
+                <span className="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded">CSS Custom</span>
+              </div>
+            </div>
+            <div className="px-6 pb-6 pt-0">
+              <a
+                href="#"
+                className="text-emerald-700 hover:text-emerald-800 font-semibold text-sm inline-flex items-center gap-1"
+              >
+                Ver detalles &rarr;
+              </a>
+            </div>
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+        <p>© {new Date().getFullYear()} • Creado con Next.js y desplegado en Vercel.</p>
+      </footer>
     </div>
   );
 }
